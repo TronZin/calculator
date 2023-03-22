@@ -25,6 +25,7 @@ const clearButton = document.querySelector(".clear");
 clearButton.addEventListener("click", clearCalc);
 
 function placeNumber(e) {
+    if (numInEdition.length === 23) return
     numInEdition += e.target.innerHTML;
     calcDisplay.textContent = numInEdition;
 }
